@@ -23,6 +23,8 @@ public class FormularioActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(FormularioActivity.this,"Aluno Salvo",Toast.LENGTH_SHORT).show();
                 finish();
+
+                //teste commit
             }
         });
     }
