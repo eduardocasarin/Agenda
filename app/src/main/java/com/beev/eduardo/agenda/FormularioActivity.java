@@ -1,5 +1,6 @@
 package com.beev.eduardo.agenda;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,14 +16,13 @@ public class FormularioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
         Button salvar = (Button) findViewById(R.id.formulario_salvar);
         salvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(FormularioActivity.this,"botao clicado",Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(FormularioActivity.this,"Aluno Salvo",Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
     }
