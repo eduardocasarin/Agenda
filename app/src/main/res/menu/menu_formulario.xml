@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.beev.eduardo.agenda.FormularioActivity">
+    <item
+        android:id="@+id/menu_formulario_ok"
+        android:title="OK"
+        android:icon="@drawable/confirma"
+        app:showAsAction="always"/>
+
+</menu>
