@@ -21,6 +21,8 @@ public class FormularioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         Button salvar = (Button) findViewById(R.id.formulario_salvar);
         salvar.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +48,7 @@ public class FormularioActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.menu_formulario_ok:
+            case R.id.title_activity_formulario:
                 Toast.makeText(FormularioActivity.this,"Aluno Salvo",Toast.LENGTH_SHORT).show();
                 finish();
                 break;

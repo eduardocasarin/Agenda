@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.beev.eduardo.agenda.FormularioActivity">
     <item
-        android:id="@+id/menu_formulario_ok"
+        android:id="@+id/title_activity_formulario"
+        android:orderInCategory="100"
         android:title="OK"
         android:icon="@drawable/confirma"
         app:showAsAction="always"/>
