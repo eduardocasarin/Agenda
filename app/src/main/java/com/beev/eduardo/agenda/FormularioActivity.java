@@ -11,11 +11,17 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RatingBar;
 import android.widget.Toast;
+
+import com.beev.eduardo.agenda.modelo.Aluno;
 
 import java.util.zip.Inflater;
 
 public class FormularioActivity extends AppCompatActivity {
+
+    private formularioHelper formulario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +29,8 @@ public class FormularioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_formulario);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+         formulario = new formularioHelper(this);
 
         Button salvar = (Button) findViewById(R.id.formulario_salvar);
         salvar.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +57,9 @@ public class FormularioActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.title_activity_formulario:
-                Toast.makeText(FormularioActivity.this,"Aluno Salvo",Toast.LENGTH_SHORT).show();
+                 Aluno aluno =formulario.pegaAluno();
+                Toast.makeText(FormularioActivity.this,"Aluno"+aluno.getNome()+ "Salvo"+"sua nota é: "+aluno.getNota(),Toast.LENGTH_SHORT).show();
+
                 finish();
                 break;
         }
